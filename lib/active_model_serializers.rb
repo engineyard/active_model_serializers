@@ -1,5 +1,5 @@
 require 'active_model'
-require 'active_model_serializer/version'
+require 'active_model_serializers/version'
 require 'active_model/serializer'
 require 'active_model/serializer_support'
 require 'active_model/serializer/railtie' if defined?(Rails)
