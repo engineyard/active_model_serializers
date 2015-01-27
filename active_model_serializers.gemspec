@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 $:.unshift File.expand_path("../lib", __FILE__)
-require "active_model/serializer/version"
+require "active_model_serializers/version"
 
 Gem::Specification.new do |gem|
   gem.authors       = ["José Valim", "Yehuda Katz", "Santiago Pastorino"]
