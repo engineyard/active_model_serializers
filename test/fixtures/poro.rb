@@ -169,8 +169,14 @@ end
 
 class NameKeyPostSerializer < ActiveModel::Serializer
   attributes :title, :body
-  
+
   has_many :comments
+end
+
+class ProfileAttributeSerializer < ProfileSerializer
+  root "profile"
+
+  attribute :map, key: :remap
 end
 
 ActiveModel::Serializer.setup do |config|

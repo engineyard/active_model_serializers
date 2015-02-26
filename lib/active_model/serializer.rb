@@ -90,6 +90,18 @@ end
         end
       end
 
+      def attribute(attr, options={})
+        striped_attr = strip_attribute(attr)
+
+        @_attributes << striped_attr
+
+        read_attribute = options[:key] || attr
+
+        define_method striped_attr do
+          object.read_attribute_for_serialization(read_attribute)
+        end unless method_defined?(read_attribute)
+      end
+
       def has_one(*attrs)
         associate(Association::HasOne, *attrs)
       end
